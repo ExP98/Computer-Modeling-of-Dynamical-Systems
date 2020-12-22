@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 w, h = 128, 128
 # cp in [0; 1000], gn in [250; 1000]
-gn, cp = 250, 1000
+gn, cp = 650, 650
 r, c_div, step_lim = gn / 250, 750, 500
 matrix = np.random.random_sample((h, w))
 
