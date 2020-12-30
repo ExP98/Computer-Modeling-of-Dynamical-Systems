@@ -11,10 +11,11 @@ h, w = 600, 600
 img = Image.new('RGB', (w, h))
 pixels = img.load()
 
-for j in range(1000):
+for j in range(10000):
     x, y = p1 * x + y, p2 + x * x
     pixels[x * 150 + w / 2, h / 2 - y * 150] = (255, 255, 0)
-img.show()
+# img.show()
+img.save('ex4/cathala.png')
 
 # # ------------ пошаговое вычисление и показ ------------
 # plt.ion()
