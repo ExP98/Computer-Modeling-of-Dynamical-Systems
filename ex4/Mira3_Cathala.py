@@ -1,5 +1,4 @@
 from PIL import Image
-from math import cos, sin, pi
 import matplotlib.pyplot as plt
 
 x, y = -0.5, 0.7
@@ -15,7 +14,7 @@ for j in range(10000):
     x, y = p1 * x + y, p2 + x * x
     pixels[x * 150 + w / 2, h / 2 - y * 150] = (255, 255, 0)
 # img.show()
-img.save('ex4/cathala.png')
+img.save('output/cathala.png')
 
 # # ------------ пошаговое вычисление и показ ------------
 # plt.ion()

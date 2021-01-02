@@ -19,4 +19,4 @@ for x, re in enumerate(np.linspace(-border, border, w)):
                 break
         pixels[x, y] = (curr_iter, curr_iter, curr_iter)
 img.show()
-# img.save('ex3/mand.png')
+# img.save('output/mand.png')

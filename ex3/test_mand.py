@@ -16,8 +16,6 @@ def mandelbrot_set(xmin, xmax, ymin, ymax, xn, yn, maxiter, horizon=2.0):
 
 
 if __name__ == '__main__':
-    import time
-    import matplotlib
     from matplotlib import colors
     import matplotlib.pyplot as plt
 
@@ -47,7 +45,8 @@ if __name__ == '__main__':
     ax.set_xticks([])
     ax.set_yticks([])
 
-    text = ("The Mandelbrot fractal set")
+    text = "The Mandelbrot fractal set"
     ax.text(xmin+.025, ymin+.025, text, color="white", fontsize=12, alpha=0.5)
 
-    plt.show()
+    fig.savefig('output/test_mand.png')
+    # plt.show()

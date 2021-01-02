@@ -20,11 +20,12 @@ def julia_visualization(c_re, c_im, ctr, brd=1.5):
             color[ctr % 3] = 0
             pixels[x, y] = tuple(color)
     ImageDraw.Draw(img).text((10, h - 20), f"Julia, c = {c}", (255, 255, 255))
-    img.save('ex1/julia_' + str(c_re) + '_' + str(c_im) + '.png')
+    img.save('output_julia/julia_' + str(c_re) + '_' + str(c_im) + '.png')
     # img.show()
 
 
-# c_list = [(-0.7055, -0.3842), (-0.22, -0.74), (-0.8, 0.156), (-0.7, 0.27015), (0.285, 0.01), (-0.0085, 0.71), (-0.12375, 0.56508), (-0.12, 0.74), (-0.39054, -0.58679), (-1.25, 0.0), (0.11031, -0.67037), (-0.194, 0.6557)]
+# c_list = [(-0.7055, -0.3842), (-0.22, -0.74), (-0.8, 0.156), (-0.7, 0.27015), (0.285, 0.01), (-0.0085, 0.71),
+# (-0.12375, 0.56508), (-0.12, 0.74), (-0.39054, -0.58679), (-1.25, 0.0), (0.11031, -0.67037), (-0.194, 0.6557)]
 c_list = [(0.285, 0.01)]
 for counter, (real, imagine) in enumerate(c_list):
     julia_visualization(real, imagine, counter)

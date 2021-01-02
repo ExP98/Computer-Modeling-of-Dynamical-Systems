@@ -47,5 +47,5 @@ fig, axes = plt.subplots(nrows=2, ncols=3, figsize=(11.69, 8.27))
 fig.suptitle(f"Newton, period {per}, A = {A}")
 for i, axs in enumerate(axes.flat):
     plot_newton(e[i], axs)
-# fig.savefig('ex5/newton_per' + str(per) + '.png')
+# fig.savefig('output/newton_per' + str(per) + '.png')
 plt.show()
