@@ -1,6 +1,7 @@
 from PIL import Image, ImageDraw, ImageFont
 import numpy as np
 
+
 def cathala(pt):
     par1, par2 = 0.7, -0.82
     return par1 * pt[0] + pt[1], par2 + pt[0] ** 2
@@ -12,7 +13,7 @@ def distance(pt1, pt2):
     return ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 0.5
 
 
-h = 0.00005  # 0.001 for cathala_pivot
+h = 0.0001  # 0.001 for cathala_pivot
 nodes_number = 3
 # p_list = [(-1.38, 0.076), (-0.896, 1.28648), (-0.19113, 0.85053), (0.6, 0.1121), (0.731, -0.82206), (0.3, -0.3943),
 #           (-0.075, -0.7686), (-0.261, -0.34164), (-1.196, -0.5), (0.23793, -0.27046), (0.43, 0.29), (0, 0.05872)]
@@ -55,6 +56,6 @@ for x, y in points_list:
 
 font = ImageFont.truetype("arial.ttf", size=50)
 ImageDraw.Draw(img).text((2 * width // 3, 10), f"Cathala\nnodes = {nodes_number}", font=font)
-# img.show()
+img.show()
 # img.save(f'output/cathala_pil_h{h}_nodes{nodes_number}.png')
-img.save(f'output/cathala_pil_pivot_h{h}_nodes{nodes_number}.png')
+# img.save(f'output/cathala_pil_pivot_h{h}_nodes{nodes_number}.png')
