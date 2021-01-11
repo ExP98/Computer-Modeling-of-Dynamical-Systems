@@ -22,8 +22,8 @@ def N_func(_z):
 
 
 h, w = 600, 600
-xa, xb = 0.75, 1.5
-ya, yb = -0.25, 0.5
+xa, xb = -0.5, 1.5
+ya, yb = -0.5, 1.5
 
 
 def plot_newton(eps, ax):
@@ -33,6 +33,7 @@ def plot_newton(eps, ax):
         for y, im in enumerate(np.linspace(ya, yb, h)):
             z = re + 1j * im
             if abs(N_func(z) ** per - z) < eps:
+                # print(eps, re, im)
                 matrix[x, y] = 1
 
     ax.imshow(matrix)
